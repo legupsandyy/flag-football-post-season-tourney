@@ -41,6 +41,7 @@ export async function GET() {
   });
 
   table.sort((a, b) => b.total - a.total);
+  export const dynamic = "force-dynamic";
 
   return NextResponse.json({ rounds: rounds.map((r) => ({ id: r.id, label: r.label })), table });
 }
